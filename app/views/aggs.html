@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Aggregations</h2>
+
+    <h3>Results</h3>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                City
+            </th>
+            <th>
+                Number of doctors
+            </th>
+        </tr>
+        <tr ng-repeat="d in vm.results.aggregations.location.buckets">
+            <td>
+                {{d.key}}
+            </td>
+            <td>
+                {{d.doc_count}}
+            </td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+
